@@ -1,0 +1,494 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  position: relative;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  margin-bottom: -10vh;
+  background: url("../Images/pexels-matt-hardy-2179205.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  span.Title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    font-size: 1.25rem;
+    color: white;
+    text-shadow: 0 0 1px grey;
+    padding: 20px;
+    text-align: center;
+    background: rgba($color: #000000, $alpha:.8);
+
+    &::first-line {
+      font-size: 3rem;
+    }
+  }
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba($color: #000000, $alpha: 0.65);
+  z-index: 10;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  a.LOGO {
+    background: black;
+    font-size: 1.75rem;
+    padding: 50px 20px 50px 5%;
+  }
+
+  div {
+    padding-right: 5%;
+
+    a {
+      border: 2px solid transparent;
+      padding: 10px 15px;
+
+      &:hover {
+        border: 2px solid white;
+      }
+    }
+  }
+
+  div.MenuBtn {
+    display: none;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+
+    div.Slice {
+      height: 5px;
+      margin: 7px;
+      width: 100%;
+      background-color: white;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  div.MenuBtn.Sliced {
+    div.Slice:nth-child(1) {
+      transform: rotate(45deg) translateY(16.5px);
+    }
+
+    div.Slice:nth-child(2) {
+      transform: translateX(-10vw);
+      background: transparent;
+    }
+
+    div.Slice:nth-child(3) {
+      transform: rotate(-45deg) translateY(-16.5px);
+    }
+  }
+}
+
+div.Menu {
+  padding: 10px;
+  display: none;
+  position: fixed;
+  top: 10vh;
+  right: 0px;
+  height: fit-content;
+  width: 0;
+  flex-direction: column;
+  z-index: 10;
+  background: rgba($color: #000000, $alpha: 0.75);
+  transition: all 0.5s ease-in-out;
+  a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    &:hover{
+      border: 2px solid white;
+    }
+  }
+
+}
+
+main {
+  background: linear-gradient(to bottom, #485563, #29323c);
+  section{
+    //max-width: 36vw;
+  }
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  section#Home {
+    div.Carousal-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      margin: auto;
+      width: 100%;
+
+      div.Slider {
+        display: flex;
+        margin: auto;
+        width: 70vw;
+
+        img {
+          width: 70vw;
+          display: none;
+        }
+      }
+
+      @keyframes FadeOff {
+        0% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes FadeOn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      div.NextBtn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        color: white;
+        background: rgba($color: #000000, $alpha: 0.6);
+        border-radius: 5px 0 0 5px;
+        height: 50px;
+        padding: 10px;
+
+        &:hover {
+          background: rgba($color: #000000, $alpha: 1.0);
+          cursor: pointer;
+        }
+      }
+
+      div.PrevBtn {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        color: white;
+        background: rgba($color: #000000, $alpha: 0.6);
+        border-radius: 0 5px 5px 0;
+        height: 50px;
+        padding: 10px;
+
+        &:hover {
+          background: rgba($color: #000000, $alpha: 1.0);
+          cursor: pointer;
+        }
+      }
+    }
+
+    span.CC {
+      color: grey;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+  }
+
+  section#WhoAmI {
+    position: relative;
+    padding: 10vh 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    span.Title {
+      font-size: 2rem;
+      color: white;
+      background: rgba($color: #000000, $alpha: 0.5);
+      padding: 10px;
+    }
+
+    div.Art {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 3% 0;
+      background: rgba($color: #ffffff, $alpha: 0.5);
+
+      p.Content {
+        padding: 3%;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        color: rgba($color: #383838, $alpha: 1.0);
+        width: 40%;
+        margin: 0 5%;
+
+        span.Heading {
+          display: block;
+          margin: 3% 0;
+          color: black;
+          font-weight: 600;
+          font-size: 1.5rem;
+        }
+      }
+
+      img {
+        height: auto;
+        width: 30%;
+      }
+    }
+  }
+
+  section#Photos {
+    padding: 10vh 5%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    span.Title {
+      display: block;
+      width: 250px;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      width: 100%;
+      color: white;
+      background: rgba($color: #000000, $alpha: 0.5);
+      padding: 10px;
+
+    }
+
+    div.Gallery {
+      display: grid;
+      grid-template-areas:
+        "img1 img2 img3"
+        "img4 img5 img6";
+      grid-template-columns: "1fr 1fr 1fr";
+      grid-template-rows: "450px 300px";
+      row-gap: 10px;
+      column-gap: 10px;
+      width: 100%;
+
+      img {
+        filter: grayscale(1);
+        transition: 0.25s ease-in-out;
+
+        &:hover {
+          filter: grayscale(0.0);
+        }
+      }
+
+      img:nth-child(1) {
+        grid-area: "img1";
+        width: inherit;
+      }
+
+      img:nth-child(2) {
+        grid-area: "img2";
+        width: inherit;
+      }
+
+      img:nth-child(3) {
+        grid-area: "img3";
+        width: inherit;
+      }
+
+      img:nth-child(4) {
+        grid-area: "img4";
+        width: inherit;
+      }
+
+      img:nth-child(5) {
+        grid-area: "img5";
+        width: inherit;
+      }
+
+      img:nth-child(6) {
+        grid-area: "img6";
+        width: inherit;
+      }
+    }
+
+    span.CC {
+      color: grey;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  section#Contact {
+    color: white;
+
+    span.ContactForm {
+      display: block;
+      width: 250px;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+      min-width: 280px;
+      margin: auto;
+
+      label {
+        margin: 10px;
+        font-size: 1.15rem;
+      }
+
+      input,
+      textarea {
+        margin: 10px;
+        padding: 5px 10px;
+        font-size: 1.25rem;
+
+        &:focus {
+          box-shadow: 0 0 5px blue;
+        }
+      }
+
+      button {
+        font-size: 1.25rem;
+        padding: 10px 20px;
+        margin: 10px;
+        width: max-content;
+
+        &:focus {
+          box-shadow: 0 0 5px blue;
+        }
+
+      }
+    }
+  }
+}
+
+footer {
+  height: auto;
+  display: flex;
+  background: black;
+  align-items: center;
+  justify-content: center;
+
+  span.CreatedBy {
+    color: white;
+
+    img {
+      height: 1.25rem;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  div.ContactSet {
+    position: relative;
+    display: flex;
+    height: auto;
+    justify-content: center;
+
+    div.ContactCard {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+      width: 48px;
+      height: 48px;
+      border: 1px solid transparent;
+      border-radius: 24px;
+      overflow: hidden;
+      transition: 0.25s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        width: 200px;
+        background: rgba($color: white, $alpha: 0.5);
+      }
+
+      img.ContactIcon {
+        display: inline-block;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 0 1px transparent;
+
+      }
+
+      a.ContactTitle {
+        text-decoration: none;
+        font-size: 1rem;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 56px;
+        transform: translateY(-50%);
+        height: 100%;
+        text-align: center;
+        padding-top: 15px;
+        color: white;
+        pointer-events: none;
+
+      }
+    }
+
+    div.Contact2,
+    div.Contact3,
+    div.Contact4 {
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+
+@media only screen and (max-width:768px){
+  nav{
+    div.NavRight a.NavBtn{
+      display: none;
+    }  
+    div.MenuBtn{
+      display: block;
+    }
+  }
+  div.Menu.Sliced{
+  display: flex;
+  width: fit-content;
+  }
+}

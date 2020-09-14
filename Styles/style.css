@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  margin-bottom: -10vh;
+  background: url("../Images/pexels-matt-hardy-2179205.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header span.Title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 0 0 1px grey;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+header span.Title::first-line {
+  font-size: 3rem;
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 10;
+  overflow: hidden;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+}
+nav a.LOGO {
+  background: black;
+  font-size: 1.75rem;
+  padding: 50px 20px 50px 5%;
+}
+nav div {
+  padding-right: 5%;
+}
+nav div a {
+  border: 2px solid transparent;
+  padding: 10px 15px;
+}
+nav div a:hover {
+  border: 2px solid white;
+}
+nav div.MenuBtn {
+  display: none;
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+}
+nav div.MenuBtn div.Slice {
+  height: 5px;
+  margin: 7px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+nav div.MenuBtn.Sliced div.Slice:nth-child(1) {
+  transform: rotate(45deg) translateY(16.5px);
+}
+nav div.MenuBtn.Sliced div.Slice:nth-child(2) {
+  transform: translateX(-10vw);
+  background: transparent;
+}
+nav div.MenuBtn.Sliced div.Slice:nth-child(3) {
+  transform: rotate(-45deg) translateY(-16.5px);
+}
+
+div.Menu {
+  padding: 10px;
+  display: none;
+  position: fixed;
+  top: 10vh;
+  right: 0px;
+  height: fit-content;
+  width: 0;
+  flex-direction: column;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease-in-out;
+}
+div.Menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+}
+div.Menu a:hover {
+  border: 2px solid white;
+}
+
+main {
+  background: linear-gradient(to bottom, #485563, #29323c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+main section#Home div.Carousal-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  width: 100%;
+}
+main section#Home div.Carousal-container div.Slider {
+  display: flex;
+  margin: auto;
+  width: 70vw;
+}
+main section#Home div.Carousal-container div.Slider img {
+  width: 70vw;
+  display: none;
+}
+@keyframes FadeOff {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes FadeOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main section#Home div.Carousal-container div.NextBtn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px 0 0 5px;
+  height: 50px;
+  padding: 10px;
+}
+main section#Home div.Carousal-container div.NextBtn:hover {
+  background: black;
+  cursor: pointer;
+}
+main section#Home div.Carousal-container div.PrevBtn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0 5px 5px 0;
+  height: 50px;
+  padding: 10px;
+}
+main section#Home div.Carousal-container div.PrevBtn:hover {
+  background: black;
+  cursor: pointer;
+}
+main section#Home span.CC {
+  color: grey;
+}
+main section#Home span.CC a {
+  text-decoration: none;
+  color: inherit;
+}
+main section#WhoAmI {
+  position: relative;
+  padding: 10vh 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main section#WhoAmI span.Title {
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+main section#WhoAmI div.Art {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 3% 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+main section#WhoAmI div.Art p.Content {
+  padding: 3%;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: #383838;
+  width: 40%;
+  margin: 0 5%;
+}
+main section#WhoAmI div.Art p.Content span.Heading {
+  display: block;
+  margin: 3% 0;
+  color: black;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+main section#WhoAmI div.Art img {
+  height: auto;
+  width: 30%;
+}
+main section#Photos {
+  padding: 10vh 5%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+main section#Photos span.Title {
+  display: block;
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+main section#Photos div.Gallery {
+  display: grid;
+  grid-template-areas: "img1 img2 img3" "img4 img5 img6";
+  grid-template-columns: "1fr 1fr 1fr";
+  grid-template-rows: "450px 300px";
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 100%;
+}
+main section#Photos div.Gallery img {
+  filter: grayscale(1);
+  transition: 0.25s ease-in-out;
+}
+main section#Photos div.Gallery img:hover {
+  filter: grayscale(0);
+}
+main section#Photos div.Gallery img:nth-child(1) {
+  grid-area: "img1";
+  width: inherit;
+}
+main section#Photos div.Gallery img:nth-child(2) {
+  grid-area: "img2";
+  width: inherit;
+}
+main section#Photos div.Gallery img:nth-child(3) {
+  grid-area: "img3";
+  width: inherit;
+}
+main section#Photos div.Gallery img:nth-child(4) {
+  grid-area: "img4";
+  width: inherit;
+}
+main section#Photos div.Gallery img:nth-child(5) {
+  grid-area: "img5";
+  width: inherit;
+}
+main section#Photos div.Gallery img:nth-child(6) {
+  grid-area: "img6";
+  width: inherit;
+}
+main section#Photos span.CC {
+  color: grey;
+}
+main section#Photos span.CC a {
+  text-decoration: none;
+  color: inherit;
+}
+main section#Contact {
+  color: white;
+}
+main section#Contact span.ContactForm {
+  display: block;
+  width: 250px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+main section#Contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  min-width: 280px;
+  margin: auto;
+}
+main section#Contact form label {
+  margin: 10px;
+  font-size: 1.15rem;
+}
+main section#Contact form input,
+main section#Contact form textarea {
+  margin: 10px;
+  padding: 5px 10px;
+  font-size: 1.25rem;
+}
+main section#Contact form input:focus,
+main section#Contact form textarea:focus {
+  box-shadow: 0 0 5px blue;
+}
+main section#Contact form button {
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  margin: 10px;
+  width: max-content;
+}
+main section#Contact form button:focus {
+  box-shadow: 0 0 5px blue;
+}
+
+footer {
+  height: auto;
+  display: flex;
+  background: black;
+  align-items: center;
+  justify-content: center;
+}
+footer span.CreatedBy {
+  color: white;
+}
+footer span.CreatedBy img {
+  height: 1.25rem;
+}
+footer span.CreatedBy a {
+  color: white;
+  text-decoration: none;
+  color: inherit;
+}
+footer div.ContactSet {
+  position: relative;
+  display: flex;
+  height: auto;
+  justify-content: center;
+}
+footer div.ContactSet div.ContactCard {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+footer div.ContactSet div.ContactCard:hover {
+  width: 200px;
+  background: rgba(255, 255, 255, 0.5);
+}
+footer div.ContactSet div.ContactCard img.ContactIcon {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 1px transparent;
+}
+footer div.ContactSet div.ContactCard a.ContactTitle {
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 56px;
+  transform: translateY(-50%);
+  height: 100%;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  pointer-events: none;
+}
+footer div.ContactSet div.Contact2,
+footer div.ContactSet div.Contact3,
+footer div.ContactSet div.Contact4 {
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 768px) {
+  nav div.NavRight a.NavBtn {
+    display: none;
+  }
+  nav div.MenuBtn {
+    display: block;
+  }
+
+  div.Menu.Sliced {
+    display: flex;
+    width: fit-content;
+  }
+}
