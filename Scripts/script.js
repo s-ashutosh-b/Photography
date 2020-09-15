@@ -94,8 +94,8 @@ const MenuBtnInit = () => {
 
   MENU_BTN.addEventListener(`focusout`, () => {
     console.log(true)
-    MENU_BTN.classList.toggle(`Sliced`)
-    MENU_BAR.classList.toggle(`Sliced`)
+    MENU_BTN.classList.remove(`Sliced`)
+    MENU_BAR.classList.remove(`Sliced`)
   })
 
   const LINK = document.querySelectorAll(`header div.Menu a`)
