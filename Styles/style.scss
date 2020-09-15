@@ -5,7 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
   position: relative;
 }
 
@@ -119,12 +119,14 @@ div.Menu {
   z-index: 10;
   background: rgba($color: #000000, $alpha: 0.75);
   transition: all 0.5s ease-in-out;
-  a{
+
+  a {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
     border: 2px solid transparent;
-    &:hover{
+
+    &:hover {
       border: 2px solid white;
     }
   }
@@ -133,9 +135,7 @@ div.Menu {
 
 main {
   background: linear-gradient(to bottom, #485563, #29323c);
-  section{
-    //max-width: 36vw;
-  }
+
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   section#Home {
     div.Carousal-container {
@@ -407,6 +407,7 @@ footer {
 
   span.CreatedBy {
     color: white;
+    display: inline-block;
 
     img {
       height: 1.25rem;
@@ -479,17 +480,72 @@ footer {
 }
 
 
-@media only screen and (max-width:768px){
-  nav{
-    div.NavRight a.NavBtn{
+@media only screen and (max-width:768px) {
+  nav {
+    div.NavRight a.NavBtn {
       display: none;
-    }  
-    div.MenuBtn{
+    }
+
+    div.MenuBtn {
       display: block;
     }
   }
-  div.Menu.Sliced{
-  display: flex;
-  width: fit-content;
+
+  div.Menu.Sliced {
+    display: flex;
+    width: fit-content;
   }
+
+  main {
+    section#Home{
+      padding: 10vh 0 0 0;
+      div.Carousal-container{
+        height: fit-content;
+        div.Slider{
+          margin: 0;
+          width: inherit;
+          img{
+          width: inherit;
+          }
+        }
+      }
+    }
+    section#WhoAmI {
+      padding: 10vh 10px;
+      div.Art {
+        flex-direction: column;
+        padding: 3% 0;
+        p.Content {
+          width: 90%;
+          margin: 0;
+        }
+        img{
+          height: fit-content;
+          width: 90%;
+        }
+      }
+    }
+    section#Photos{
+      div.Gallery{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    section#Contact{
+      form{
+        max-width: 90%;
+      }
+    }
+
+  }
+      footer{
+        padding: 20px;
+       flex-direction: column;
+       height: auto;
+       div.ContactSet{
+          flex-direction: column;
+          align-items: center;
+       }
+      }
+
 }

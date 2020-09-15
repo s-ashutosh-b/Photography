@@ -344,6 +344,7 @@ footer {
 }
 footer span.CreatedBy {
   color: white;
+  display: inline-block;
 }
 footer span.CreatedBy img {
   height: 1.25rem;
@@ -414,5 +415,51 @@ footer div.ContactSet div.Contact4 {
   div.Menu.Sliced {
     display: flex;
     width: fit-content;
+  }
+
+  main section#Home {
+    padding: 10vh 0 0 0;
+  }
+  main section#Home div.Carousal-container {
+    height: fit-content;
+  }
+  main section#Home div.Carousal-container div.Slider {
+    margin: 0;
+    width: inherit;
+  }
+  main section#Home div.Carousal-container div.Slider img {
+    width: inherit;
+  }
+  main section#WhoAmI {
+    padding: 10vh 10px;
+  }
+  main section#WhoAmI div.Art {
+    flex-direction: column;
+    padding: 3% 0;
+  }
+  main section#WhoAmI div.Art p.Content {
+    width: 90%;
+    margin: 0;
+  }
+  main section#WhoAmI div.Art img {
+    height: fit-content;
+    width: 90%;
+  }
+  main section#Photos div.Gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  main section#Contact form {
+    max-width: 90%;
+  }
+
+  footer {
+    padding: 20px;
+    flex-direction: column;
+    height: auto;
+  }
+  footer div.ContactSet {
+    flex-direction: column;
+    align-items: center;
   }
 }
