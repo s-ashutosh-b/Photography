@@ -240,14 +240,14 @@ main {
       align-items: center;
       justify-content: space-evenly;
       margin: 3% 0;
-      background: rgba($color: #ffffff, $alpha: 0.5);
+      background: rgba($color: #ffffff, $alpha: 0.75);
 
       p.Content {
         padding: 3%;
         font-size: 1rem;
         letter-spacing: 1px;
         font-weight: lighter;
-        color: rgba($color: #383838, $alpha: 1.0);
+        color: rgba($color: black, $alpha: 1.0);
         width: 40%;
         margin: 0 5%;
 

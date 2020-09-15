@@ -206,14 +206,14 @@ main section#WhoAmI div.Art {
   align-items: center;
   justify-content: space-evenly;
   margin: 3% 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.75);
 }
 main section#WhoAmI div.Art p.Content {
   padding: 3%;
   font-size: 1rem;
   letter-spacing: 1px;
   font-weight: lighter;
-  color: #383838;
+  color: black;
   width: 40%;
   margin: 0 5%;
 }
