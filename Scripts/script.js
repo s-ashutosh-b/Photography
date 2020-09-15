@@ -80,6 +80,8 @@ const MenuBtnInit = () => {
   const MENU_BAR = document.querySelector(`body div.Menu`)
   const NAV_LINK = document.querySelectorAll(`body div.Menu a`)
 
+
+
   MENU_BTN.addEventListener(`click`, () => {
     MENU_BTN.classList.toggle(`Sliced`)
     MENU_BAR.classList.toggle(`Sliced`)
@@ -92,17 +94,20 @@ const MenuBtnInit = () => {
     })
   });
 
-  MENU_BTN.addEventListener(`focusout`, () => {
+
+
+  /*   MENU_BTN.addEventListener(`focusout`, () => {
     console.log(true)
     MENU_BTN.classList.remove(`Sliced`)
     MENU_BAR.classList.remove(`Sliced`)
   })
-
-  const LINK = document.querySelectorAll(`header div.Menu a`)
+  */
+ /*   const LINK = document.querySelectorAll(`header div.Menu a`)
+  console.log(LINK)
   LINK.forEach(NavBtn => {
     NavBtn.addEventListener(`click`, () => {
       MENU_BTN.classList.toggle(`Sliced`)
       MENU_BAR.classList.toggle(`Sliced`)
     })
   });
-}
+*/}
