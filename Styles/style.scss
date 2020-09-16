@@ -142,9 +142,10 @@ main {
       position: relative;
       display: flex;
       align-items: center;
-      height: 100vh;
+      height: auto;
+      padding-top: 12vh;
       margin: auto;
-      width: 100%;
+      width: 70%;
 
       div.Slider {
         display: flex;
@@ -223,7 +224,7 @@ main {
 
   section#WhoAmI {
     position: relative;
-    padding: 10vh 10%;
+    padding: 10vh 10% 0;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -268,22 +269,20 @@ main {
   }
 
   section#Photos {
-    padding: 10vh 5%;
+    padding: 0 5% 10vh;
     display: block;
     position: relative;
     overflow: hidden;
 
     span.Title {
       display: block;
-      width: 250px;
-      margin: auto;
       text-align: center;
       margin-bottom: 20px;
       font-size: 2rem;
       width: 100%;
       color: white;
       background: rgba($color: #000000, $alpha: 0.5);
-      padding: 10px;
+      padding: 10px 0;
 
     }
 

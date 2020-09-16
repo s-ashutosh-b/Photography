@@ -124,9 +124,10 @@ main section#Home div.Carousal-container {
   position: relative;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  padding-top: 12vh;
   margin: auto;
-  width: 100%;
+  width: 70%;
 }
 main section#Home div.Carousal-container div.Slider {
   display: flex;
@@ -190,7 +191,7 @@ main section#Home span.CC a {
 }
 main section#WhoAmI {
   position: relative;
-  padding: 10vh 10%;
+  padding: 10vh 10% 0;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -229,22 +230,20 @@ main section#WhoAmI div.Art img {
   width: 30%;
 }
 main section#Photos {
-  padding: 10vh 5%;
+  padding: 0 5% 10vh;
   display: block;
   position: relative;
   overflow: hidden;
 }
 main section#Photos span.Title {
   display: block;
-  width: 250px;
-  margin: auto;
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
   width: 100%;
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 10px 0;
 }
 main section#Photos div.Gallery {
   display: grid;
