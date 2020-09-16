@@ -134,9 +134,8 @@ div.Menu {
 }
 
 main {
-  background: linear-gradient(to bottom, #485563, #29323c);
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, #d9a7c7, #fffcdc);
+background-attachment: fixed;
   section#Home {
     div.Carousal-container {
       position: relative;
@@ -145,7 +144,7 @@ main {
       height: auto;
       padding-top: 12vh;
       margin: auto;
-      width: 70%;
+      width: 70vw;
 
       div.Slider {
         display: flex;
@@ -185,9 +184,13 @@ main {
         color: white;
         background: rgba($color: #000000, $alpha: 0.6);
         border-radius: 5px 0 0 5px;
-        height: 50px;
-        padding: 10px;
-
+        height: fit-content;
+        padding: 10px 0 10px 10px;
+        img{
+          margin: auto;
+          height: 48px;
+          width: 48px;
+        }
         &:hover {
           background: rgba($color: #000000, $alpha: 1.0);
           cursor: pointer;
@@ -201,9 +204,13 @@ main {
         color: white;
         background: rgba($color: #000000, $alpha: 0.6);
         border-radius: 0 5px 5px 0;
-        height: 50px;
-        padding: 10px;
-
+        height: fit-content;
+        padding: 10px 0 10px 10px;
+        img{
+          margin: auto;
+          height: 48px;
+          width: 48px;
+        }
         &:hover {
           background: rgba($color: #000000, $alpha: 1.0);
           cursor: pointer;
@@ -357,9 +364,13 @@ main {
       text-align: center;
       margin-bottom: 20px;
       font-size: 2rem;
+      background: rgba($color: #000000, $alpha: 0.75);
+      padding: 10px 0;
+      width: 50%;
     }
 
     form {
+      background: rgba($color: black, $alpha: 0.5);
       display: flex;
       flex-direction: column;
       max-width: 50%;
@@ -378,7 +389,7 @@ main {
         font-size: 1.25rem;
 
         &:focus {
-          box-shadow: 0 0 5px blue;
+          box-shadow: 0 0 5px pink;
         }
       }
 
@@ -387,9 +398,10 @@ main {
         padding: 10px 20px;
         margin: 10px;
         width: max-content;
+        cursor: not-allowed;
 
         &:focus {
-          box-shadow: 0 0 5px blue;
+          box-shadow: 0 0 5px pink;
         }
 
       }
@@ -532,12 +544,16 @@ footer {
       }
     }
     section#Contact{
+      span.ContactForm{
+        width: 90%;
+      }
       form{
         max-width: 90%;
       }
     }
 
   }
+  
       footer{
         padding: 20px;
        flex-direction: column;

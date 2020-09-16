@@ -117,8 +117,8 @@ div.Menu a:hover {
 }
 
 main {
-  background: linear-gradient(to bottom, #485563, #29323c);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, #d9a7c7, #fffcdc);
+  background-attachment: fixed;
 }
 main section#Home div.Carousal-container {
   position: relative;
@@ -127,7 +127,7 @@ main section#Home div.Carousal-container {
   height: auto;
   padding-top: 12vh;
   margin: auto;
-  width: 70%;
+  width: 70vw;
 }
 main section#Home div.Carousal-container div.Slider {
   display: flex;
@@ -161,8 +161,13 @@ main section#Home div.Carousal-container div.NextBtn {
   color: white;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 5px 0 0 5px;
-  height: 50px;
-  padding: 10px;
+  height: fit-content;
+  padding: 10px 0 10px 10px;
+}
+main section#Home div.Carousal-container div.NextBtn img {
+  margin: auto;
+  height: 48px;
+  width: 48px;
 }
 main section#Home div.Carousal-container div.NextBtn:hover {
   background: black;
@@ -175,8 +180,13 @@ main section#Home div.Carousal-container div.PrevBtn {
   color: white;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 0 5px 5px 0;
-  height: 50px;
-  padding: 10px;
+  height: fit-content;
+  padding: 10px 0 10px 10px;
+}
+main section#Home div.Carousal-container div.PrevBtn img {
+  margin: auto;
+  height: 48px;
+  width: 48px;
 }
 main section#Home div.Carousal-container div.PrevBtn:hover {
   background: black;
@@ -302,8 +312,12 @@ main section#Contact span.ContactForm {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px 0;
+  width: 50%;
 }
 main section#Contact form {
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   max-width: 50%;
@@ -322,16 +336,17 @@ main section#Contact form textarea {
 }
 main section#Contact form input:focus,
 main section#Contact form textarea:focus {
-  box-shadow: 0 0 5px blue;
+  box-shadow: 0 0 5px pink;
 }
 main section#Contact form button {
   font-size: 1.25rem;
   padding: 10px 20px;
   margin: 10px;
   width: max-content;
+  cursor: not-allowed;
 }
 main section#Contact form button:focus {
-  box-shadow: 0 0 5px blue;
+  box-shadow: 0 0 5px pink;
 }
 
 footer {
@@ -448,6 +463,9 @@ footer div.ContactSet div.Contact4 {
   main section#Photos div.Gallery {
     display: flex;
     flex-direction: column;
+  }
+  main section#Contact span.ContactForm {
+    width: 90%;
   }
   main section#Contact form {
     max-width: 90%;
