@@ -94,20 +94,12 @@ const MenuBtnInit = () => {
     })
   });
 
-
-
-  /*   MENU_BTN.addEventListener(`focusout`, () => {
-    console.log(true)
-    MENU_BTN.classList.remove(`Sliced`)
-    MENU_BAR.classList.remove(`Sliced`)
+  window.addEventListener(`click`, (e) => {
+    let focus = e.path[0].classList[0]
+    if ((focus == `MenuBtn`) || (focus == `Slice`) || (focus == `NavBtn`) || (focus == `Menu`)) {
+    } else {
+      MENU_BTN.classList.remove(`Sliced`)
+      MENU_BAR.classList.remove(`Sliced`)
+    }
   })
-  */
- /*   const LINK = document.querySelectorAll(`header div.Menu a`)
-  console.log(LINK)
-  LINK.forEach(NavBtn => {
-    NavBtn.addEventListener(`click`, () => {
-      MENU_BTN.classList.toggle(`Sliced`)
-      MENU_BAR.classList.toggle(`Sliced`)
-    })
-  });
-*/}
+}
